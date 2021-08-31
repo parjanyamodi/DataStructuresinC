@@ -4,39 +4,21 @@
 
 struct Points
 {
-    double x, y;
+    float x, y;
 };
-
-int substract(double a, double b)
-{
-    double c;
-    c = b - a;
-    return c;
-}
-
-int add(double a, double b)
-{
-    double c;
-    c = b + a;
-    return c;
-}
 
 int formula(struct Points p1, struct Points p2)
 {
-    double a,b,c,d,e,f;
-    a = substract(p1.x, p2.x);
-    b = substract(p1.y, p2.y);
-    c = a*a;
-    d = b*b;
-    e = add(c,d);
-    printf("\n%f",e);
-    f = sqrt(e);
+    float a,f;
+    a = (((p2.x - p1.x)*(p2.x - p1.x))+((p2.y - p1.y)*(p2.y - p1.y)));
+    printf("\n%f",a);
+    f = sqrt(a);
     return f;
 }
 
 int main()
 {
-    double d,e;
+    float d,e;
     struct Points p1 = {-3,-1};
     struct Points p2 = {2,3};
     
