@@ -7,7 +7,7 @@ struct Points
     float x, y;
 };
 
-int formula(struct Points p1, struct Points p2)
+float formula(struct Points p1, struct Points p2)
 {
     float a,f;
     a = (((p2.x - p1.x)*(p2.x - p1.x))+((p2.y - p1.y)*(p2.y - p1.y)));
